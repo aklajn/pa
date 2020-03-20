@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>PA Tests</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="AK">
+		<script src="media/js/pa.js"></script>
+		<script src="media/js/test.js"></script>
+	</head>
+	<body>
+        <div style="font-family: monospace" id="testResults"></div>
+    </body>
+    <script>
+        var results = RunTests();
+        document.getElementById('testResults').innerHTML = results.toHTML();
+    </script>
+</html>

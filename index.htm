@@ -1,0 +1,344 @@
+<html>
+	<head>
+		<title>PA Editor</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="AK">
+		<script src="media/js/pa.js"></script>
+		<link href="media/style/style.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" typehref="favicon.ico"/>
+	</head>
+	<body>
+		<div id="topMenu">
+			<div class="menuSeparator"></div>
+			<div class="topMenuGroup" id="toolMenu">
+				<div class="menuButton" title="1" id="penTool">
+					<div class="buttonImage"><img src="media/icons/tool-pen.png"></div>
+					<div class="buttonDesc">Ołówek</div>
+				</div>
+				<div class="menuButton" title="2" id="lineTool">
+					<div class="buttonImage"><img src="media/icons/tool-line.png"></div>
+					<div class="buttonDesc">Linia</div>
+				</div>
+				<div class="menuButton" title="3" id="rectTool">
+					<div class="buttonImage"><img src="media/icons/tool-rect.png"></div>
+					<div class="buttonDesc">Porostokąt</div>
+				</div>
+				<div class="menuButton" title="4" id="filledRectTool">
+					<div class="buttonImage"><img src="media/icons/tool-filledrect.png"></div>
+					<div class="buttonDesc">Wypełniony porostokąt</div>
+				</div>
+				<div class="menuButton" title="5" id="fillTool">
+					<div class="buttonImage"><img src="media/icons/tool-fill.png"></div>
+					<div class="buttonDesc">Wypełnienie</div>
+				</div>
+				<div class="menuButton"  title="6" id="probeTool">
+						<div class="buttonImage"><img src="media/icons/tool-probe.png"></div>
+						<div class="buttonDesc">Pipeta</div>
+				</div>
+			</div>
+			<div class="menuSeparator"></div>
+			<div class="menuButton" title="Ctrl &larr;" id="moveLeft">
+				<div class="buttonImage"><img src="media/icons/move-left.png"></div>
+				<div class="buttonDesc">W lewo</div>
+			</div>
+			<div class="menuButton" title="Ctrl &rarr;" id="moveRight">
+				<div class="buttonImage"><img src="media/icons/move-right.png"></div>
+				<div class="buttonDesc">W prawo</div>
+			</div>
+			<div class="menuButton" title="Ctrl &uarr;" id="moveUp">
+					<div class="buttonImage"><img src="media/icons/move-up.png"></div>
+					<div class="buttonDesc">W górę</div>
+			</div>
+			<div class="menuButton" title="Ctrl &darr;" id="moveDown">
+					<div class="buttonImage"><img src="media/icons/move-down.png"></div>
+					<div class="buttonDesc">W dół</div>
+			</div>
+			<div class="menuButton" title="v" id="reverseVertically">
+					<div class="buttonImage"><img src="media/icons/reverse-vertically.png"></div>
+					<div class="buttonDesc">Odbij pionowo</div>
+			</div>
+			<div class="menuButton" title="h" id="reverseHorizontaly">
+					<div class="buttonImage"><img src="media/icons/reverse-horizontaly.png"></div>
+					<div class="buttonDesc">Odbij poziomo</div>
+			</div>
+			<div class="menuButton" title="n" id="negative">
+					<div class="buttonImage"><img src="media/icons/tool-negative.png"></div>
+					<div class="buttonDesc">Negatyw</div>
+			</div>
+			<div class="menuButton" title="t" id="textGen">
+				<div class="buttonImage"><img src="media/icons/text.png"></div>
+				<div class="buttonDesc">Tekst</div>
+			</div>
+			<div class="menuSeparator"></div>
+			<div class="menuButton" title="a" id="addFrame">
+				<div class="buttonImage"><img src="media/icons/add-frame.png"></div>
+				<div class="buttonDesc">Dodaj</div>
+			</div>
+			<div class="menuButton" title="w" id="addMultiple">
+				<div class="buttonImage"><img src="media/icons/add-multiple.png"></div>
+				<div class="buttonDesc">Dodaj wiele</div>
+			</div>
+			<div class="menuButton" title="r lub delete" id="removeFrames">
+				<div class="buttonImage"><img src="media/icons/remove.png"></div>
+				<div class="buttonDesc">Usuń</div>
+			</div>
+			<div class="menuButton" title="Ctrl + b" id="cutFrames">
+				<div class="buttonImage"><img src="media/icons/cut.png"></div>
+				<div class="buttonDesc">Wytnij</div>
+			</div>
+			<div class="menuButton" title="Ctrl + c" id="copyFrames">
+				<div class="buttonImage"><img src="media/icons/copy.png"></div>
+				<div class="buttonDesc">Kopiuj</div>
+			</div>
+			<div class="menuButton" title="Ctrl + v" id="pasteFrames">
+				<div class="buttonImage"><img src="media/icons/paste.png"></div>
+				<div class="buttonDesc">Wklej</div>
+			</div>
+			<div class="menuButton" title="Ctrl + d" id="duplicateFrames">
+				<div class="buttonImage"><img src="media/icons/duplicate.png"></div>
+				<div class="buttonDesc">Duplikuj</div>
+			</div>
+			<div class="menuButton" title="Ctrl + z" id="undo">
+				<div class="buttonImage"><img src="media/icons/edit-undo.png"></div>
+				<div class="buttonDesc">Cofnij</div>
+			</div>
+			<div class="menuSeparator"></div>
+			<div class="menuButton" title="&larr;" id="firstFrame">
+				<div class="buttonImage"><img src="media/icons/firstFrame.png"></div>
+				<div class="buttonDesc">Początek</div>
+			</div>
+			<div class="menuButton" title="&uarr;" id="prevFrame">
+				<div class="buttonImage"><img src="media/icons/prevFrame.png"></div>
+				<div class="buttonDesc">Poprzednia</div>
+			</div>
+			<div class="menuButton" title="Spacja" id="playPause">
+				<div class="buttonImage"><img id="playPauseImg" src="media/icons/play.png"></div>
+				<div class="buttonDesc" id="playPauseDesc">Odtwórz</div>
+			</div>
+			<div class="menuButton" title="&darr;" id="nextFrame">
+				<div class="buttonImage"><img src="media/icons/nextFrame.png"></div>
+				<div class="buttonDesc">Następna</div>
+			</div>
+			<div class="menuButton" title="&rarr;" id="lastFrame">
+				<div class="buttonImage"><img src="media/icons/lastFrame.png"></div>
+				<div class="buttonDesc">Koniec</div>
+			</div>
+			<div class="menuSeparator"></div>
+			<div class="menuButton" title="Ctrl + o" id="openAnimation">
+				<div class="buttonImage"><img src="media/icons/file-open.png"></div>
+				<div class="buttonDesc">Otwórz</div>
+			</div>
+			<div class="menuButton" title="Ctrl + b" id="resize">
+				<div class="buttonImage"><img src="media/icons/resize.png"></div>
+				<div class="buttonDesc">Rozmiar</div>
+			</div>
+			<div class="menuButton" title="Ctrl + s" id="saveAnimation">
+				<div class="buttonImage"><img src="media/icons/file-save.png"></div>
+				<div class="buttonDesc">Zapisz</div>
+			</div>
+			<div class="menuButton" title="Ctrl + Shit + s" id="saveAnimationAs">
+				<div class="buttonImage"><img src="media/icons/file-saveas.png"></div>
+				<div class="buttonDesc">Zapisz jako</div>
+			</div>
+			<div class="menuButton" title="m" id="music">
+				<div class="buttonImage"><img src="media/icons/file-music.png"></div>
+				<div class="buttonDesc">Muzyka</div>
+			</div>
+		</div>
+		<div id="frameList"></div>
+		<div id="mainContainer">
+			<div id="displayContainer">
+				<canvas id="display"></canvas>
+			</div>
+			<div id="sideMenu"></div>
+		</div>
+		<div id="bottomMenu">
+			<div id="colorMenu">
+				<div class="colorShow">
+					<div id="colorFirst"></div>
+					<div id="colorSecond"></div>
+				</div>
+				<div id="colorPallete" class="inlineBlock" style="height: 30px">
+					<div class="colorLine">
+						<div class="color" style="background-color: #000000"></div>
+						<div class="color" style="background-color: #FF0000"></div>
+						<div class="color" style="background-color: #00FF00"></div>
+						<div class="color" style="background-color: #0000FF"></div>
+						<div class="color" style="background-color: #00B4FF"></div>
+						<div class="color" style="background-color: #FFAA00"></div>
+						<div class="color" style="background-color: #FFDC00"></div>
+						<div class="color" style="background-color: #FF00FF"></div>
+					</div>
+					<div class="colorLine">
+						<div class="color" style="background-color: #FFFFFF"></div>
+						<div class="color" style="background-color: #7F0000"></div>
+						<div class="color" style="background-color: #007F00"></div>
+						<div class="color" style="background-color: #00007F"></div>
+						<div class="color" style="background-color: #005A7F"></div>
+						<div class="color" style="background-color: #7F5500"></div>
+						<div class="color" style="background-color: #F76E00"></div>
+						<div class="color" style="background-color: #7F007F"></div>
+					</div>
+				</div>
+			</div>
+			<div id="durationMenu">
+				<input type="range"  class="durationInput" id="durationRange" min="10" max="1000" value="50" step="10">
+				<br>
+				<input type="number" class="durationInput" id="durationNumber" min="10" max="1000" value="50" step="10">
+			</div>
+		</div>
+		<div id="boxBackground">
+			<div id="box">
+				<div id="textBox" class="hidden">
+					<p id="textInfo">Trwa pobieranie fontów...</p>
+					<form id="textForm">
+					<table class="fullWidth noBorder">
+						<tr>
+							<td>Tekst:</td>
+							<td>
+								<input class="fullWidth" autocomplete="off" type="text" id="textToGenerate">
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 100px;">Font:</td>
+							<td><select id="fontSelect" class="fullWidth"></select></td>
+						</tr>
+						<tr>
+							<td style="width: 100px;">Animacja:</td>
+							<td>
+								<select id="textAnimation" class="fullWidth">
+									<option value="horizontal">Przewijana poziomo</option>
+									<option value="vertical">Przewijana pionowo</option>
+									<option value="static">Jedna litera na klatkę</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>Czas :</td>
+							<td>
+								<input type="number" min="50" max="1000" step="50" id="textFrameDuration" value="50">
+							</td>
+						</tr>
+						<tr>
+							<td>Przesunięcie:</td>
+							<td>
+								<input type="number" min="-100" max="100" id="textOffset" value="0">
+							</td>
+						</tr>
+					</table>
+					<input type="button" value="Anuluj" class="cancelButton halfWidth">
+					<input type="submit" value="Generuj" id="generateText" class="halfWidth">
+					</form>
+				</div>
+				<div id="resizeBox" class="hidden">
+					<p><b>Uwaga: tej operacji nie można cofnąć. Zapisz zmiany!</b></p>
+					<p>Podaj ile dodać lub usunąć pikseli z każdej strony. Wartość dodatna dodaje, ujemna kasuje wiersz lub kolumnę</p>
+					<form id="resizeForm">
+					<table class="fullWidth noBorder">
+						<tr>
+							<td>Lewo:</td>
+							<td>
+								<input type="number" min="-100" max="100" step="1" id="leftResize" value="0">
+							</td>
+						</tr>
+						<tr>
+							<td>Prawo:</td>
+							<td>
+								<input type="number" min="-100" max="100" step="1" id="rightResize" value="0">
+							</td>
+						</tr>
+						<tr>
+							<td>Góra:</td>
+							<td>
+								<input type="number" min="-100" max="100" step="1" id="topResize" value="0">
+							</td>
+						</tr>
+						<tr>
+							<td>Dół:</td>
+							<td>
+								<input type="number" min="-100" max="100" step="1" id="bottomResize" value="0">
+							</td>
+						</tr>
+					</table>
+					<input type="button" value="Anuluj" class="cancelButton halfWidth">
+					<input type="submit" value="Zmień rozmiar" id="generateText" class="halfWidth">
+					</form>
+				</div>
+				<div id="multipleFrameBox" class="hidden">
+					<table class="fullWidth noBorder">
+						<tr>
+							<td>Liczba klatek:</td>
+							<td>
+								<input type="number" min="1" max="1000" step="1" id="addFrameCount" value="50">
+							</td>
+						</tr>
+						<tr>
+							<td>Czas klatki:</td>
+							<td>
+								<input type="number" min="10" max="1000" step="10" id="addFrameDuration" value="50">
+							</td>
+						</tr>
+						<tr>
+							<td>Kolor początkowy:</td>
+							<td>
+								<input type="color" class="fullWidth" id="addFramesFirstColor">
+							</td>
+						</tr>
+						<tr>
+							<td>Kolor kończowy:</td>
+							<td>
+								<input type="color" class="fullWidth" id="addFramesLastColor">
+							</td>
+						</tr>
+					</table>
+					<input type="button" value="Anuluj" class="cancelButton halfWidth">
+					<input type="button" value="Generuj" id="addMultipleSubmit" class="halfWidth">
+				</div>
+				<div id="musicBox" class="hidden">
+					<form id="musicForm">
+						<p><input type="radio" checked name="musicSrc" value="local"> Wybierz z dysku</p>
+						<input type="file" class="fullWidth" name="musicFile">
+						<p><input type="radio" name="musicSrc" value="online"> Podaj URL</p>
+						<input type="text" class="fullWidth" name="musicUrl">
+						<p><input type="radio" name="musicSrc" value="none"> Brak</p>
+						<input type="button" value="Anuluj" class="cancelButton halfWidth">
+						<input type="submit" value="Ustaw"  class="halfWidth">
+					</form>
+				</div>
+				<div id="fileOpenBox" class="hidden">
+					<form id="fileOpen">
+						<table class="fullWidth noBorder">
+							<tr>
+								<td>Otwórz z dysku:</td>
+								<td>
+									<input type="file" class="fullWidth" name="animationFile" accept=".piwo7,.piwo6">
+								</td>
+							</tr>
+						</table><br>
+						<input type="button" value="Anuluj" class="cancelButton halfWidth">
+						<input type="submit" value="Otwórz"  class="halfWidth">
+					</form>
+				</div>
+				<div id="fileSaveBox" class="hidden">
+					<table class="fullWidth noBorder">
+						<tr>
+							<td>Nazwa pliku:</td>
+							<td>
+								<input type="text" class="fullWidth" id="saveFileName">
+							</td>
+						</tr>
+					</table>
+					<br>
+					<input type="button" value="Anuluj" class="cancelButton thirtyPercentWidth">
+					<input type="button" id="saveLocalBtn" value="Zapisz lokalnie" class="cancelButton thirtyPercentWidth">
+					<a href="#" id="downloadFileBtn" >
+						<span class="fakeButton thirtyPercentWidth">Pobierz</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script>
+		NewAnimation();
+	</script>
+</html>

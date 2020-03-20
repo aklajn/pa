@@ -1,0 +1,309 @@
+body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #31363b;
+    user-select:none;
+    color: #FFFFFF;
+}
+
+#topMenu {
+    position: absolute;
+    overflow: hidden;
+    top: 0px;
+    height: 130px;
+    width: 100%;
+}
+
+#mainContainer {
+    position: absolute;
+    top: 130px;
+    bottom: 80px;
+    left: 150px;
+    right: 0;
+}
+
+#bottomMenu {
+    position: absolute;
+    bottom: 0px;
+    left: 150px;
+    height: 80px;
+    right: 0;
+}
+
+#sideMenu {
+    width: 15%;
+    float: left;
+    overflow: auto;
+}
+
+#displayContainer {
+    width: 65%;
+    height: 100%;
+    float: left;
+}
+
+#frameList {
+    position: absolute;
+    width: 140px;
+    margin-right: 6px;
+    margin-left: 2px;
+    bottom: 5px;
+    top: 130px;
+    overflow: auto;
+    background-color: #232629;
+    border: 1px solid #606468;
+    border-radius: 2px;
+}
+
+#display {
+    height: 100%;
+    width: 100%;
+}
+
+.frame {
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.frameSelected {
+    margin: 10px 0;
+    padding: 5px;
+    background: #0d7eb9;
+}
+
+.frameCurrent {
+    margin: 10px 0;
+    padding: 5px;
+    background: #3daee9;
+}
+
+.topMenuGroup {
+    display: inline-block;
+}
+
+.inlineBlock {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.menuButtonSelected {
+    position: relative;
+    margin: 4px 3px;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid #3daee9;
+    background-color: #575b5f;
+    display: inline-block;
+    color: white;
+}
+
+.menuButton {
+    margin: 4px 3px;
+    padding: 3px;
+    border: 1px solid #31363b;
+    display: inline-block;
+    color: white;
+}
+
+.menuButtonSelected:hover {
+    border-radius: 5px;
+    border: 1px solid #3daee9;
+    background-color: #3daee9;
+}
+
+.menuButtonSelected:active {
+    border-radius: 5px;
+    border: 1px solid #3daee9;
+    background-color: #777b7f;
+}
+
+.menuButton:hover {
+    border-radius: 5px;
+    border: 1px solid #3daee9;
+}
+
+.menuButton:active {
+    border-radius: 5px;
+    background-color: #777b7f;
+}
+
+.buttonImage {
+    margin-bottom: 3px;
+    width: 100%;
+    text-align: center;
+}
+
+#toolMenu {
+    margin: 0;
+    padding: 0;
+}
+
+.menuSeparator {
+    height: 54px;
+    width: 4px;
+    margin: 0 3px;
+    border-left: 1px solid #606468;
+    border-right: 1px solid #606468;
+    display: inline-block;
+}
+
+.buttonDesc {
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center;
+}
+
+.color {
+    border-top: 2px solid #25292d;
+    border-left: 2px solid #25292d;
+    border-bottom: 2px solid #3d434a;
+    border-right: 2px solid #3d434a;
+    width: 30px;
+    height: 22px;
+    margin: 0;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+.colorShow {
+    border-top: 2px solid #25292d;
+    border-left: 2px solid #25292d;
+    border-bottom: 2px solid #3d434a;
+    border-right: 2px solid #3d434a;
+    background-color: #61666b;
+    width: 54px;
+    height: 54px;
+    margin: 0;
+    margin-top: 2px;
+    display: inline-block;
+}
+
+#colorFirst {
+    border-top: 2px solid #25292d;
+    border-left: 2px solid #25292d;
+    border-bottom: 2px solid #3d434a;
+    border-right: 2px solid #3d434a;
+    background-color: #FFFFFF;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    z-index: 2;
+}
+
+#colorSecond {
+    border-top: 2px solid #25292d;
+    border-left: 2px solid #25292d;
+    border-bottom: 2px solid #3d434a;
+    border-right: 2px solid #3d434a;
+    background-color: #000000;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    z-index: 1;
+}
+
+#colorMenu {
+    border-top: 2px solid #25292d;
+    border-left: 2px solid #25292d;
+    border-bottom: 2px solid #3d434a;
+    border-right: 2px solid #3d434a;
+    margin: 4px 0;
+    width: 390px;
+    height: 66px;
+    display: inline-block;
+}
+
+#durationMenu {
+    border-top: 2px solid #25292d;
+    border-left: 2px solid #25292d;
+    border-bottom: 2px solid #3d434a;
+    border-right: 2px solid #3d434a;
+    float: right;
+    margin: 4px 0;
+    margin-right: 15px;
+    height: 66px;
+    width: 20%;
+}
+
+#boxBackground {
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+#box {
+    background-color: #31363b;
+    opacity: 1;
+    width: 550px;
+    border: 6px solid #606468;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: auto;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.noBorder {
+    border: none;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.halfWidth {
+    width: 49%;
+}
+
+.center {
+    text-align: center;
+}
+
+input {
+    background-color: #232629;
+    color: #FFFFFF;
+    border: 1px solid #606468;
+    padding: 1px;
+}
+
+select {
+    background-color: #232629;
+    color: #FFFFFF;
+    border: 1px solid #606468;
+}
+
+.hidden {
+    display: none;
+}
+
+.thirtyPercentWidth {
+    width: 30%;
+}
+
+.durationInput {
+    width: 90%;
+    margin-left: 3px;
+}
+
+.fakeButton {
+    background-color: #232629;
+    color: #FFFFFF;
+    border: 1px solid #606468;
+    padding: 2px 0 1px 0;
+    text-align: center;
+    display: inline-block;
+}
